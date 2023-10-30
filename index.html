@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <!-- Google fonts -->
+
+  <link rel="stylesheet" href="style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  We are launching soon!
+  <main class="main">
 
-  Subscribe and get notified
+    <header class="header section-center">
+      <h1 class="header-title h1">
+        <img src="./images/logo.svg" alt="Logo" class="header-logo" width="68" height="20">
+      </h1>
+      <h2 class="header-subtitle h2"><span class="gray">We are launching</span> soon!</h2>
+      <p class="header-message p">Subscribe and get notified</p>
+    </header>
 
-  Notify Me
+    <form action="/" class="form section-center">
+      <div class="form-field">
+        <input type="email" name="email" id="email" class="form-input-email" placeholder="Your email adress...">
+        <p id="email-error" class="form-error">Please Provide a valid email adress</p>
+      </div>
+      <button type="submit" class="form-btn">Notify Me</button>
+    </form>
 
-  &copy; Copyright Ping. All rights reserved.
+    <section class="dashboard section-center">
+      <img src="./images/illustration-dashboard.png" alt="A dashboard." class="dashboard-img">
+    </section>
 
-  <footer>
+    <footer class="footer section-center">
+      <ul class="footer-socials">
+        <li class="footer-socials-item"><img src="./images/icon-facebook.svg" alt="Facebook" width="30"></li>
+        <li class="footer-socials-item"><img src="./images/icon-twitter.svg" alt="Twitter" width="30"></li>
+        <li class="footer-socials-item"><img src="./images/icon-instagram.svg" alt="Instagram" width="30"></li>
+      </ul>
+      <p class="footer-copyright p">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+  <div>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
-  </footer>
+  </div>
+
+
+  <script src="./index.js"></script>
 </body>
+
 </html>

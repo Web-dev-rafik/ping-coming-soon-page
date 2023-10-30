@@ -1,0 +1,286 @@
+/* Reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Colors */
+
+:root {
+  /* Primary */
+
+  --Blue: hsl(223, 87%, 63%);
+
+  /* Secondary */
+
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+
+  /* Neutral */
+
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* Typography */
+
+:root {
+  --fs: 1rem; /* 16px by default */
+  --fs-h1: 2rem;
+  --fs-h2: 1.6rem;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: var(--fs);
+  line-height: 1.5;
+}
+
+/* Typography Media queries */
+
+/* Desktop :  992px */
+
+@media (min-width: 62em) {
+  :root {
+    --fs: 1.25rem; /* 20px */
+    --fs-h1: 4rem;
+    --fs-h2: 3rem;
+  }
+}
+
+.p {
+  font-size: var(--fs);
+  font-weight: 400;
+  color: var(--Desaturated-Red);
+}
+
+.h1 {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Utils */
+
+.section-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Body */
+
+body {
+}
+
+/* main */
+
+.main {
+  max-width: 500px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+/* Header */
+
+.header {
+}
+
+.header-title {
+}
+
+.header-logo {
+}
+
+.header-subtitle {
+  margin-top: 2rem;
+}
+
+.gray {
+  color: var(--Gray);
+  font-weight: 300;
+}
+
+.header-message {
+  margin-top: 1rem;
+}
+
+/* Form */
+
+.form {
+  margin-top: 2rem;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.form-input-email {
+  width: 100%;
+  padding: 1em 2rem;
+  border-radius: 2em;
+  border: 1px solid var(--Pale-Blue);
+}
+
+.form-input-email::placeholder {
+  color: var(--Pale-Blue);
+}
+
+/* This class is used by javascript */
+.js-form-input-is-error {
+  border: 1px solid var(--Light-Red);
+}
+
+.form-error {
+  color: var(--Light-Red);
+  font-size: calc(var(--fs) * 0.75);
+  font-style: italic;
+  margin-top: 0.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  display: none;
+}
+
+.form-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 1em;
+  border-radius: 2em;
+  background-color: var(--Blue);
+  color: var(--White);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  opacity: 0.8;
+}
+
+/* Dashboard */
+
+.dashboard {
+  margin-top: 2rem;
+}
+
+.dashboard-img {
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.footer-socials-item {
+}
+
+.footer-copyright {
+  margin-top: 2rem;
+  font-size: calc(var(--fs) * 0.75);
+  text-align: center;
+  color: var(--Gray);
+}
+
+/* Media queries */
+
+/* Desktop:  992px*/
+
+@media (min-width: 62em) {
+  .main {
+    max-width: 992px;
+  }
+
+  .header-logo {
+    transform: scale(1.2);
+  }
+
+  .form {
+    width: 60%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .form-error {
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  .form-btn {
+    margin-top: 0;
+    flex: 1 1 33%;
+    align-self: flex-start;
+  }
+
+  .dashboard {
+    margin-top: 4rem;
+  }
+
+  .dashboard-img {
+    width: 65%;
+  }
+}
+
+/* Attribution Styles */
+.attribution {
+  display: none;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
